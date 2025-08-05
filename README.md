@@ -3,36 +3,39 @@ script.py has been granted rwxrwxr-x permissions via chmod, allowing the owner a
 
 
 
+## 🔐 Linux File Permission Types
+
+```mermaid
+flowchart TD
+    A[File Permissions] --> B[Read (r)]
+    A --> C[Write (w)]
+    A --> D[Execute (x)]
+    
+    B --> B1[View file contents]
+    C --> C1[Modify or delete file]
+    D --> D1[Run file as a program/script]
+
 
 
 ---
 
-### ✅ **Option 2: ASCII Flowchart** (For plain Markdown)
+If you prefer an **ASCII-style** version for compatibility with all Markdown viewers:
 
 ```markdown
-## 🔐 Linux File Permissions Flowchart (ASCII)
+## 🔐 Linux File Permission Types (ASCII)
 
-        +--------+
-        | Start  |
-        +---+----+
-            |
-            v
-  +----------------------+
-  | Do you own the file? |
-  +----------------------+
-       |         |
-      Yes       No
-       |         |
-       v         v
-+------------------+     +-----------------------------+
-| Use Owner perms  |     | Are you in the file's group?|
-+------------------+     +-----------------------------+
-                             |            |
-                            Yes          No
-                             |            |
-                             v            v
-                 +------------------+   +-------------------+
-                 | Use Group perms  |   | Use Others perms  |
-                 +------------------+   +-------------------+
-
-  All permissions checked in: read (r), write (w), execute (x)
+          +------------------+
+          | File Permissions |
+          +--------+---------+
+                   |
+    +--------------+--------------+
+    |              |              |
+    v              v              v
++--------+    +---------+    +------------+
+|  Read  |    |  Write  |    |  Execute   |
+|   (r)  |    |   (w)   |    |    (x)     |
++---+----+    +----+----+    +-----+------+
+    |              |               |
+    v              v               v
+View file     Modify/delete     Run file as
+contents      file content      a program
