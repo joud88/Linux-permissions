@@ -5,22 +5,34 @@ script.py has been granted rwxrwxr-x permissions via chmod, allowing the owner a
 
 
 
+---
 
-## 🔐 Linux File Permissions Flowchart
+### ✅ **Option 2: ASCII Flowchart** (For plain Markdown)
 
-```mermaid
-flowchart TD
-    A[Start] --> B{Do you own the file?}
-    B -- Yes --> C[Use Owner permissions (rwx)]
-    B -- No --> D{Are you in the file's group?}
-    D -- Yes --> E[Use Group permissions (rwx)]
-    D -- No --> F[Use Others permissions (rwx)]
-    C --> G[Can Read? -> r]
-    C --> H[Can Write? -> w]
-    C --> I[Can Execute? -> x]
-    E --> G
-    E --> H
-    E --> I
-    F --> G
-    F --> H
-    F --> I
+```markdown
+## 🔐 Linux File Permissions Flowchart (ASCII)
+
+        +--------+
+        | Start  |
+        +---+----+
+            |
+            v
+  +----------------------+
+  | Do you own the file? |
+  +----------------------+
+       |         |
+      Yes       No
+       |         |
+       v         v
++------------------+     +-----------------------------+
+| Use Owner perms  |     | Are you in the file's group?|
++------------------+     +-----------------------------+
+                             |            |
+                            Yes          No
+                             |            |
+                             v            v
+                 +------------------+   +-------------------+
+                 | Use Group perms  |   | Use Others perms  |
+                 +------------------+   +-------------------+
+
+  All permissions checked in: read (r), write (w), execute (x)
