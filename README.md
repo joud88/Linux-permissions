@@ -22,7 +22,7 @@ I used the `chmod` command to change the permissions of a script file named `scr
 | **Others**| `r-x`        | Can read and execute, but **not** write     |
 
 The command used:
-```bash
+
 chmod 775 script.py
 
 
