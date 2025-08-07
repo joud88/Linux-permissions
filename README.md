@@ -23,14 +23,13 @@ I used the `chmod` command to change the permissions of a script file named `scr
 
 The command used:
 
-chmod 775 script.py
+"chmod 775 script.py"
 
 
-## 🧩 File Permissions Flowchart
+## 🖼️ File Permissions Flowchart
 
 To help visualize how Linux file permissions work, I created a flowchart showing the decision-making process behind **read**, **write**, and **execute** permissions for the **user**, **group**, and **others**.
 
-## 🖼️ Flowchart Overview
 
 The flowchart helps answer:
 
