@@ -26,20 +26,18 @@ The command used:
 chmod 775 script.py
 
 
+## 🧩 File Permissions Flowchart
 
-🧩 File Permissions Flowchart
-To help visualize how Linux file permissions work, I created a flowchart showing the decision-making process behind read, write, and execute permissions for the user, group, and others.
+To help visualize how Linux file permissions work, I created a flowchart showing the decision-making process behind **read**, **write**, and **execute** permissions for the **user**, **group**, and **others**.
 
-🖼️ Flowchart Overview
+## 🖼️ Flowchart Overview
+
 The flowchart helps answer:
 
-Who is trying to access the file?
+- Who is trying to access the file?  
+- Do they have read, write, or execute permission?  
+- What actions can they perform based on their role?
 
-Do they have read, write, or execute permission?
+## ✅ Summary
 
-What actions can they perform based on their role?
-
-
-
-✅ Summary
-By using chmod, I granted full access to the file owner and group, while giving limited access to others. The accompanying flowchart explains Linux file permissions in a clear, visual way.
+By using `chmod`, I granted full access to the file owner and group, while giving limited access to others. The accompanying flowchart explains Linux file permissions in a clear, visual way.
